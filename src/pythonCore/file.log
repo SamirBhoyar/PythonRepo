@@ -1,0 +1,17 @@
+WARNING:root:==========Basic log level:=============
+WARNING:root:Warning log : 2025-10-04 18:19:45.862547
+ERROR:root:Error log : 2025-10-04 18:19:45.862547
+WARNING:root:==========Log leve: INFO=============
+INFO:root:Info log : 2025-10-04 18:20:28.300197
+WARNING:root:Warning log : 2025-10-04 18:20:28.300197
+ERROR:root:Warning log : 2025-10-04 18:20:28.300197
+
+2025-10-04 18:22:34,267 ===========Logging level: DEBUG and  current time============
+2025-10-04 18:22:34,268 Debug log 
+2025-10-04 18:22:34,268 Info log 
+2025-10-04 18:22:34,268 Warning log 
+2025-10-04 18:22:34,268 Error log 
+
+
+2025-10-04 18:29:27,187 DEBUG ===========levelname===========
+2025-10-04 18:29:27,187 INFO  : Info log
