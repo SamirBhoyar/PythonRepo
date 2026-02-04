@@ -11,6 +11,22 @@ print('============Read using With Statement============')
 with open("/Users/samirb/Documents/WorkSpace/PySpark/resource/text.txt") as f:
     print(f.read(10),'Rohit')
 
+'''Q3) Python
+open the input.txt
+go to the 5th line in the file
+then go to the 5th word in that 5th line
+print the "5th word and length of the word"
+'''
+
+with open("/Users/samirb/Documents/WorkSpace/PySpark/resource/text3.txt") as f:
+        for line_no, line in enumerate(f, start=1):
+            print(line_no, line)
+            if(line_no == 5):
+                words=line.split()
+                word = words[4]
+                print(word)
+
+
 print('============Write File============')
 # To create a new file in Python, use the open() method, with one of the following parameters:
 # "x" - Create - will create a file, returns an error if the file exists
