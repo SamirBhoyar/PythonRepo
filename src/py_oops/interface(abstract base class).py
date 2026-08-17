@@ -69,6 +69,25 @@ def read_data(source):
 
 read_data(File())
 read_data(NetworkStream())
+print('==============with abstract base class==============')
+class DataSource(ABC):
+    @abstractmethod
+    def read(self):
+        pass
+
+class KafkaSource(DataSource):
+  def read(self):
+    return "Reading from Kafka"
+
+class FileSource(DataSource):
+  def read(self):
+    return "Reading from File"
+
+def process(source: DataSource):
+    print(source.read())
+
+process(KafkaSource())
+process(FileSource())
 
 print('==============Error example: AttributeError===================')
 #Behind the Scenes:
@@ -84,6 +103,7 @@ print('==============Error example: AttributeError===================')
 
 #Question : What Happens If It Doesn’t Match
 class Car:
+    # def sound(self):
     def drive(self):
         print("Vroom!")
 

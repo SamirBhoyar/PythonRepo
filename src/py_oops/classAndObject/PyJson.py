@@ -1,5 +1,7 @@
 
 import json
+from pprint import pprint
+
 #Note: If you have a JSON string, you can parse it by using the "json.loads()" method.
 # some JSON:
 x =  '{ "name":"John", "age":30, "city":"New York"}'
@@ -11,7 +13,7 @@ y = json.loads(x)
 print(y["age"])
 
 print('-----------------')
-import json
+
 
 x = {
     "name": "John",
@@ -25,7 +27,11 @@ x = {
         {"model": "Ford Edge", "mpg": 24.1}
     ]
 }
-
+print(x)
+print('-----------------')
+pprint(x) # it will just let you print the way 'x' is(in Python format),
+          # but you can't write this format in file like json.dump(Strict JSON format)
+print('-----------------')
 # sort the result alphabetically by keys:
 # Use the indent parameter to define the numbers of indents:
 # (Indentation in Python refers to the whitespace (spaces or tabs) at the beginning of a line of code)

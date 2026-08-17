@@ -17,14 +17,15 @@ go to the 5th line in the file
 then go to the 5th word in that 5th line
 print the "5th word and length of the word"
 '''
-
-with open("/Users/samirb/Documents/WorkSpace/PySpark/resource/text3.txt") as f:
+print('============read 5 line from File============')
+with open("/Users/samirb/Documents/GitHub/PythonRepo/src/resource/text3.txt") as f:
         for line_no, line in enumerate(f, start=1):
             print(line_no, line)
             if(line_no == 5):
+                print('============read 5th word from File============')
                 words=line.split()
                 word = words[4]
-                print(word)
+                print('word:',word+', length of word:',len(word))
 
 
 print('============Write File============')
@@ -35,7 +36,7 @@ print('============Write File============')
 
 #Append file
 with open("/Users/samirb/Documents/WorkSpace/PySpark/resource/text2.txt", "a") as f:
-    f.write("Now the file has more content!")
+    f.write("Now the file has more content 1!")
 
 #open and read the file after the appending:
 with open("/Users/samirb/Documents/WorkSpace/PySpark/resource/text2.txt") as f:
@@ -43,7 +44,7 @@ with open("/Users/samirb/Documents/WorkSpace/PySpark/resource/text2.txt") as f:
 
 #Override file
 with open("/Users/samirb/Documents/WorkSpace/PySpark/resource/text2.txt", "w") as f:
-    f.write("Now the file has more content!")
+    f.write("Now the file has more content 2!")
 #open and read the file after the appending:
 with open("/Users/samirb/Documents/WorkSpace/PySpark/resource/text2.txt") as f:
     print(f.read())
@@ -54,8 +55,8 @@ print('============Delete File============')
 f = open("/Users/samirb/Documents/WorkSpace/PySpark/resource/text3.txt", "x")
 f.close()
 import os
-if os.path.exists("/Users/samirb/Documents/WorkSpace/PySpark/resource/text3.txt"):
-    os.remove("/Users/samirb/Documents/WorkSpace/PySpark/resource/text3.txt")
+if os.path.exists("/Users/samirb/Documents/WorkSpace/PySpark/resource/text5.txt"):
+    os.remove("/Users/samirb/Documents/WorkSpace/PySpark/resource/text5.txt")
     print("Delete successfully")
 else:
     print("The file does not exist")

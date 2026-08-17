@@ -4,9 +4,7 @@
     <output url="file://$MODULE_DIR$/out/production/PythonRepo" />
     <output-test url="file://$MODULE_DIR$/out/test/PythonRepo" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/.venv" />
-    </content>
+    <content url="file://$MODULE_DIR$/src" />
     <orderEntry type="jdk" jdkName="Python 3.12 (PythonRepo)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

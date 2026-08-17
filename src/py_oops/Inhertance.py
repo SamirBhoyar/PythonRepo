@@ -28,11 +28,13 @@ class Abc:
     def __init__(self,p,q):
         print("Abc constructor called ",p," : ",q)
 
-class Child(Xyz, Abc):   #Xyz constructor called
+class Child1(Xyz, Abc):   #Xyz constructor called
     pass
-class Child2( Abc, Xyz):
+
+class Child2(Abc, Xyz):
     pass
-obj = Child(2,3)
+
+obj = Child1(2,3)
 obj2 = Child2(2,3)
 
 
@@ -77,6 +79,6 @@ class child(xyz, abc):
 
 Obj = child()
 
-print('''Note: super() automatically handles the MRO:
+print('''Note: super() automatically handles the MRO(Method Resolution Order):
 Child → Xyz → Abc, but if i remove super from xyz class. it will only give child->xyz as per 
 first parent''' )

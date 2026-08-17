@@ -1,4 +1,4 @@
-# with recursively issue:
+# with recursively issue with except if function is not return with return keyword :
 '''1)When an exception occurs:
 2)The except block runs.
 3)Inside it, you call fun() again (recursively).

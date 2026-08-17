@@ -71,7 +71,21 @@ def fun(num):
             raise CustomError("Pass value greate then one")
     except CustomError as e:
         print(f"please :",{e})
-
     print(num)
 
 fun(-1)
+print("==========")
+# raise: is used to trigger an exception explicitly.
+
+# try:
+#     x = int("abc")
+# except ValueError:
+#     print("Conversion failed")
+# But sometimes you want to handle + rethrow:
+
+try:
+    x = int("abc")
+except ValueError as e:
+    # print("Logging error: ",e)
+    print("Logging error")
+    raise

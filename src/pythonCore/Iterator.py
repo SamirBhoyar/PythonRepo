@@ -13,16 +13,16 @@
 #We use the __next__() method for iterating. This method helps iterators return the next item available from the object.
 
 
-my_list = [10, 20, 30, 40]
-my_iterator = iter(my_list)
-print(next(my_iterator))  # Output: 10
-print(next(my_iterator))  # Output: 20
-print(next(my_iterator))  # Output: 30
-print(next(my_iterator))
+iterable_list = [10, 20, 30, 40]
+iterator = iter(iterable_list)
+print(next(iterator))  # Output: 10
+print(next(iterator))  # Output: 20
+print(next(iterator))  # Output: 30
+print(next(iterator))
 
 print('-----------------------')
 #While you can manually use iter() and next(), the most common way to iterate through a list (or any iterable)
 # in Python is using a for loop, which implicitly handles the creation of the iterator and the calls to next():
 
-for item in my_list:
+for item in iterable_list:
     print(item)
